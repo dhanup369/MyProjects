@@ -1,0 +1,39 @@
+
+Create virtual environments for python with conda
+
+
+A virtual environment is a named, isolated, working copy of Python that that maintains its own files, directories, and paths so that you can work with specific versions of libraries or Python itself without affecting other Python projects. Virtual environmets make it easy to cleanly separate different projects and avoid problems with different dependencies and version requiremetns across components. The conda command is the preferred interface for managing intstallations and virtual environments with the Anaconda Python distribution
+
+
+
+1.Check conda is installed and in your PATH
+		
+		 conda -V
+
+2.Check conda is up to date
+		
+		conda update conda
+
+3.Create a virtual environment for your project
+
+		conda create -n yourenvname python=x.x anaconda
+
+4.Activate your virtual environment.
+		
+		source activate yourenvname
+
+5.To see a list of all your environments, use the command 
+
+		conda info -e
+
+6.Install additional Python packages to a virtual environment.
+
+		conda install -n yourenvname [package]
+
+7.Deactivate your virtual environment.
+
+		source deactivate
+
+8.Delete a no longer needed virtual environment
+
+		conda remove -n yourenvname -all
