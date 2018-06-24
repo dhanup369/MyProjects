@@ -3,4 +3,4 @@ def mymean():
     a = input("Enter the numbers: ").split()
     for i in a:
         s=s+int(i)
-    print(s/len(a))
+    return s/len(a)

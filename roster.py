@@ -8,16 +8,15 @@ department = ["Boss", "Sales", "Sales", "HR"]
 
 # Zip all three lists together into tuples
 roster = zip(indexes, employees, department)
-for i in roster:
-        print (list(i))
+
 # save the output file path
-output_file = os.path.join("roster.csv")
+output_file = os.path.join("output.csv")
 
 # open the output file, create a header row, and then write the zipped object to the csv
 with open(output_file, "w", newline="") as datafile:
     writer = csv.writer(datafile)
 
     writer.writerow(["Index", "Employee", "Department"])
-    writer.writerows(roster)
-
+    
+    writer.writerows(list(roster))
 
