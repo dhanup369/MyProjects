@@ -14,6 +14,6 @@ with open ('netflix_ratings.csv','r') as file:
     if usermovie in title:
         movie_index=title.index(usermovie)
         userlist=rows[movie_index]
-        print(usermovie,"is rated ",userlist[1],"with the rating of ",userlist[6])
+        print(usermovie,"is rated ",userlist[1],"with the rating of ",userlist[5])
     else:
         print("User Video could not be found")
